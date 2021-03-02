@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    
+    <!--Adding favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <!--Metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DynamicDerma</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script type="module" src="scrollup.js"></script>
+  </head>
+  
+  <!--Formatting begins-->
+  <body>
+    
+    <!--Scrolltrigger for the scroll up button-->
+    <section class = "scrollTrigger"></section>
+    
+    <!--Menu bar begins-->
+    <header id = "menu">
+      <!--Pancake menu-->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      
+      <!--Adds logo-->
+      <a href="#menu"><img class = "logo" src="/images/logo.png"></a>
+
+      <nav>
+        <ul>
+          <li><a href="#evaluator">Evaluator</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#info">Info</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+
+    <!--Welcome Section-->
+    <section id = "welcome">
+      <h1>Welcome to DynamicDerma</h1>
+
+      <!--Get started button-->
+      <a href="#evaluator"><img src="/images/getstarted.png"/></a><br>
+    </section>
+
+    <!--Evaluation part of the website-->
+    <section id = "evaluator">
+      <h1>Skincare Evaluator</h1>
+         
+      
+      <img id = "picture" src = "images/sample.png"></img>
+      
+      <!--Form for the evaluation-->
+      <p>Upload an image that you want evaluated. Please make sure to upload a close up image of your skin condition with a similar format to the image displayed on the right.</p>
+
+      
+      
+      <!--Form for the evaluation-->
+      <form ref='uploadForm' id = "upload" action='https://OnlineDerma.joshuazou.repl.co/upload' method='post' encType="multipart/form-data">
+        <div id = "twopartsofform">
+          <input type="file" name="sampleFile" />
+          <input type="image" src="images/evaluateupload.png" class="btTxtsubmit" id="saveForm" onclick="button();"/>
+        </div>
+      </form>     
+    </section>
+    <br>
+    <!--Loading gif-->
+
+      <img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e47sj5wmvv6h8fjw7f0rhl4rynrsb6ibug8olfi387f&rid=giphy.gif" class="loadingGif" id="loadingGif" /> 
+      
+          <script>
+      document.getElementById('loadingGif').style.visibility='hidden';
+      function button(){
+      document.getElementById('loadingGif').style.visibility='visible';
+      }
+    </script>
+    <!--Map section begins-->
+    <section id = "map">
+      <h1>Dermatologist Map</h1>
+      <p>See where the closest dermatologist is!</p><br>
+      <!--Map image-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d85883.68155809883!2d-122.17179150249615!3d47.72586827264069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdermatologist!5e0!3m2!1sen!2sus!4v1614382306013!5m2!1sen!2sus" width="800" height="350" style="border:0;" allowfullscreen="" loading="lazy" id = "mapimage"></iframe>
+    </section>
+
+
+
+    
+    <!--About section begins-->
+    <section id = "about">
+      
+      <h1>About</h1>
+      <p>DynamicDerma is a website deisgned to help diagnose skin conditions while educating users about dermatology. Out evaluator can detect over 20 of the <a href = "https://www.healthline.com/health/skin-disorders"target = "_blank" class = "tooltip">most common skin diseases<span class="tooltiptext">Click to see a list of common skin diseases</span></a>. Using <a class = "tooltip" href = "https://www.google.com/imghp?hl=en"target = "_blank">Google Image Search  <span class="tooltiptext">Click to find out more about Google Images</span></a> we are able to evaluate the skin disease. For the results, tips, and information about dermatology, we used information from the <a href = "https://www.mayoclinic.org/"target = "_blank" class = "tooltip">Mayo Clinic<span class="tooltiptext">Click to find out more about Mayo Clinic</span></a> and the <a href = "https://www.aad.org/public" target = "_blank" class = "tooltip"> American Academy of Dermatology<span class="tooltiptext">Click to find out more about the American Academy of Dermatology</span></a>.</p>
+    </section>
+
+    <section id = "info">
+      <h1>Dermatology Information</h1>
+      <ul>
+  <b>
+    <div class = "done"> 
+    
+    <li><a href = "https://dynamicderma.joshuaren.repl.co/html/acne.html" target = "_blank">Acne</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/actinic_keratosis.html" target = "_blank">Actinic Keratosis</a></li>   
+
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/basal_cell_carcinoma.html" target = "_blank">Basal Cell Carcinoma</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/blisters.html" target = "_blank">Blister</a></li> 
+  
+
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/carbuncle.html" target = "_blank">Carbuncle</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/cellulitis.html" target = "_blank">Cellulitis</a></li>
+      </b> 
+
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/chickenpox.html" target = "_blank">Chickenpox</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/cold_sore.html" target = "_blank">Cold Sore</a></li> 
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/contact_dermatitis.html" target = "_blank">Contact Dermatitis</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/eczema.html" target = "_blank">Eczema</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/hives.html" target = "_blank">Hives</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/impetigo.html" target = "_blank">Impetigo</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/keratosis_pilaris.html" target = "_blank">Keratosis Pilaris</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/latex.html" target = "_blank">Latex</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/lupus.html" target = "_blank">Lupus</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/measles.html" target = "_blank">Measles</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/melanoma.html" target = "_blank">Melanoma</a></li></div>
+
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/melasma.html" target = "_blank">Melesma</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/psoriasis.html" target = "_blank">Psoriasis</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/ringworm.html" target = "_blank">Ringworm</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/rosacea.html" target = "_blank">Rosacea</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/seborrheic_eczema.html" target = "_blank">Seborrheic Eczema</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/squamous_cancer.html" target = "_blank">Squamous Cancer</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/vitiligo.html" target = "_blank">Vitiligo</a></li>
+  <li><a href = "https://dynamicderma.joshuaren.repl.co/html/wart.html" target = "_blank">Warts</a></li>
+
+  </b>
+</ul>
+    </section>
+
+    <!--Contact section begins-->
+    <section id = "contact">
+      <h1>Contact Us</h1>
+
+      <!--Start of Form-->
+      <form action="https://getform.io/f/830e2aab-0700-413e-aeb5-dbc9075fd9a7" method="POST">
+
+        <!--Create name text box-->
+        <input type="text" id="name" name="name" placeholder = "Your name" cols = "15" rows = "1" required>
+        
+        <!--Create email text box-->
+        <input type="text" id="email" name="email" placeholder = "Your email (optional)" cols = "15" rows = "1">
+        <div>
+        <!--Create ask us anything text box-->
+        <textarea rows="2" cols="25" class = "askmessage" id="ask" placeholder="Ask us anything!" required></textarea>
+        </div>
+        <input type="hidden">
+        <!--Creates submit button-->
+        <input type="image" src="images/submit.png" id="submit"/>
+      </form>
+    </section>
+
+    <footer><br>
+      <ul>      
+        <li><a href="#menu">Home</a></li>
+        <li><a href="#evaluator">Evaluator</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#info">Information</a></li>
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+        <li>&copy; DynamicDerma 2021</li><br>
+      </ul>
+    </footer>
+    
+    <!--Creates scroll to top-->
+    <button class="scrollToTopBtn">↑</button>
+  </body>
+
+
+</html>
